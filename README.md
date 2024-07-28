@@ -1,7 +1,6 @@
 # MongoDb-Queries
 
-#  Show all Database
+**Show all Database**
 
-**Query**
 ```javascript
 show dbs
