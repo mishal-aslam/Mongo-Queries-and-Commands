@@ -3,9 +3,11 @@
 ## Show all Database
 
 ```javascript
-show dbs
+show dbs 
 
-## create database in insert in the server
+
+
+## Create database and insert it in the server
 
 ```javascript
 use databaseName
