@@ -4,3 +4,8 @@
 
 ```javascript
 show dbs
+
+## create database in insert in the server
+
+```javascript
+use databaseName
