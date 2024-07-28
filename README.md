@@ -6,46 +6,52 @@
 show dbs 
 ```
 
-## Create database and insert it in the server
+## Create and switch to database 
 
 ```
-use databaseName
+use collectionName
 ```
 
-## Insert Field into the collection
+## Insert Row
 
 ```
-db.databaseName.insertOne({ name: "mishal" , age: 20 , proffesion: "frontend dev"  })
+db.collectionName.insertOne({ name: "mishal" , age: 20 , proffesion: "frontend dev"  })
 ```
 
-## Way to search for data in a database
+## Insert Multiple Rows
 
 ```
-db.databaseName.find()
+db.collectionName.insertMany([{ name: "mishal" , age: 20 , profesion: "frontend dev"  } , { name: "john doe" , age : 22  , profession  : "full satck dev"  } ])
 ```
 
-## Way to search for specific data in a database
+## Get all Rows
 
 ```
-db.databaseName.findOne({ name :"mishal"  })
+db.collectionName.find()
+```
+
+## Search for specific row in a database
+
+```
+db.collectionName.findOne({ name :"mishal"  })
 ```
 
 ## Update Specific Data in a Database
 
 ```
- db.databaseName.updateOne({ name: "mishal"}  , { $set : {name: "mishal aslam" , gender: "female"  }} )
+ db.collectionName.updateOne({ name: "mishal"}  , { $set : {name: "mishal aslam" }} )
 ```
 
 ## delete Specific Data in a Database
 
 ```
- db.databaseName.deleteOne({ name: "mishal aslam"  })
+ db.collectionName.deleteOne({ name: "mishal aslam"  })
 ```
 
 ## Drop a Collection in MongoDB
 
 ```
- db.databaseName.drop()
+ db.collectionName.drop()
 ```
 
 ## Remove the entire database.
