@@ -21,7 +21,18 @@ db.collectionName.insertOne({ name: "mishal" , age: 20 , profession: "frontend d
 ## Insert Multiple Rows
 
 ```
-db.collectionName.insertMany([{ name: "mishal" , age: 20 , profession: "frontend dev"  } , { name: "john doe" , age : 22  , profession  : "full satck dev"  } ])
+db.collectionName.insertMany([
+  {
+    name: "Mishal",
+    age: 20,
+    profession: "Frontend Developer"
+  },
+  {
+    name: "John Doe",
+    age: 22,
+    profession: "Full Stack Developer"
+  }
+])
 ```
 
 ## Get all Rows
