@@ -43,10 +43,25 @@ db.collectionName.find({ age: 20 })  // Find documents with age 20
 db.collectionName.find({ profession: "frontend dev" })  // Find documents with profession "frontend dev"
 ```
 
-## Sort and Limit Data
+## Retrieving Specific Fields from a Collection
+
+```
+db.collectionName.find({}, { name: 1, age: 1, _id: 0 })  // 1 for true  and 0 for false
+```
+```
+db.collectionName.find({ profession: "front end dev" }, { name: 1, age: 1, _id: 0 })
+```
+
+## Sort Data
 
 ```
 db.collectionName.find().sort({ age: 1 })  // Sort documents by age in ascending order
+db.collectionName.find().sort({ age: -1 })  // Sort documents by age in descending order
+```
+
+## Limit Data
+
+```
 db.collectionName.find().limit(2)  // Limit the result to 2 documents
 ```
 
@@ -85,6 +100,17 @@ db.collectionName.deleteMany({ age: { $gt: 25 } })  // Delete documents with age
 ```
  db.dropDatabase()
 ```
+
+
+## Greater Than Less Than and or equal
+
+```
+db.collectionName.find({age: {$gt:20}})  // greater than
+db.collectionName.find({age: {$lt:25}})  // less than
+db.collectionName.find({age: {$gte:21}})  //greater than or equal
+db.collectionName.find({age: {$lte:25}})  //less than or equal
+```
+
 
 
 
