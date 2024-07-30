@@ -35,44 +35,6 @@ db.collectionName.insertMany([
 ])
 ```
 
-# Query for a Document Nested in an Array
-
-```
-db.books.insertMany([
-  {
-    "title": "Book Title",
-    "author": "Author Name",
-    "pageCount": 250,
-    "genres": ["Fiction", "Thriller", "Mystery"],
-    "reviews": [
-      {
-        "reviewerName": "John Doe",
-        "rating": 4,
-        "reviewText": "Great book!"
-      },
-      {
-        "reviewerName": "Jane Smith",
-        "rating": 5,
-        "reviewText": "Excellent read!"
-      }
-    ]
-  },
-  {
-    "title": "Another Book Title",
-    "author": "Another Author Name",
-    "pageCount": 300,
-    "genres": ["Non-Fiction", "Biography", "History"],
-    "reviews": [
-      {
-        "reviewerName": "Alice Brown",
-        "rating": 4,
-        "reviewText": "Informative and engaging."
-      }
-    ]
-  }
-])
-```
-
 ## Get all Rows
 
 ```
@@ -160,6 +122,44 @@ db.collectionName.find({age: {$gte:21}})  //greater than or equal
 db.collectionName.find({age: {$lte:25}})  //less than or equal
 ```
 
+
+# Query for a Document Nested in an Array
+
+```
+db.books.insertMany([
+  {
+    "title": "Book Title",
+    "author": "Author Name",
+    "pageCount": 250,
+    "genres": ["Fiction", "Thriller", "Mystery"],
+    "reviews": [
+      {
+        "reviewerName": "John Doe",
+        "rating": 4,
+        "reviewText": "Great book!"
+      },
+      {
+        "reviewerName": "Jane Smith",
+        "rating": 5,
+        "reviewText": "Excellent read!"
+      }
+    ]
+  },
+  {
+    "title": "Another Book Title",
+    "author": "Another Author Name",
+    "pageCount": 300,
+    "genres": ["Non-Fiction", "Biography", "History"],
+    "reviews": [
+      {
+        "reviewerName": "Alice Brown",
+        "rating": 4,
+        "reviewText": "Informative and engaging."
+      }
+    ]
+  }
+])
+```
 
 
 
