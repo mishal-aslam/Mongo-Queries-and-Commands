@@ -123,7 +123,7 @@ db.collectionName.find({age: {$lte:25}})  //less than or equal
 ```
 
 
-# Query for a Document Nested in an Array
+## Query for a Document Nested in an Array
 
 ```
 db.books.insertMany([
@@ -166,7 +166,7 @@ db.books.insertMany([
 db.books.find({ genres: { $eq: ["Fantasy"] } })
 ```
 
-### To find documents where "Fantasy" is one of the values in the "genres" array, you can use the $in operator:
+## To find documents where "Fantasy" is one of the values in the "genres" array, you can use the $in operator:
 ```
 db.books.find({ genres: { $in: ["Fantasy"] } })
 ```
