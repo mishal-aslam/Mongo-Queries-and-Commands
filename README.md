@@ -162,14 +162,18 @@ db.books.insertMany([
 ```
 
 ## To find documents where "Fantasy" is the only value in the "genres" array, you can use the $eq operator:
+
 ```
 db.books.find({ genres: { $eq: ["Fantasy"] } })
 ```
 
 ## To find documents where "Fantasy" is one of the values in the "genres" array, you can use the $in operator:
+
 ```
 db.books.find({ genres: { $in: ["Fantasy"] } })
 ```
+
+## finding ratings within an array of objects (reviews)
 
 ```
 db.books.find(
